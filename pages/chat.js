@@ -1,4 +1,3 @@
-import Chat from './components/Chat';
 import Layout from './layouts/Layout';
 import ChatboxLayout from './layouts/ChatboxLayout';
 import React, { useState, useEffect } from "react";
