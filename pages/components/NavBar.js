@@ -13,7 +13,7 @@ export default function NavBar() {
     }
   }
   return (
-    <nav className="bg-[#18181b] px-2 sm:px-4 py-2.5">
+    <nav className="bg-[#18181b] px-2 sm:px- py-1">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/">
           <a className="flex items-center">

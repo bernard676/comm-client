@@ -1,5 +1,6 @@
 import { useUser } from '@auth0/nextjs-auth0';
-import React, { useState } from 'react';
+import { Button } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import { useMainContext, useMainUpdateContext } from '../contexts/MainUserContext';
 import { useSocket } from '../_app';
 export default function Sidebar() {
@@ -27,6 +28,7 @@ export default function Sidebar() {
       socket.emit("join_room", serverRoom);
     }
   }
+
   return (
     <div className="text-white">
       <nav>
@@ -34,8 +36,8 @@ export default function Sidebar() {
           {
             servers.map((element, index) => {
               return (
-                <li className="border border-black bg-red-100 w-md p-2" key={index} onClick={() => joinRoomFromServer(servers[index])}>
-                  <button className="button bg-[gray] w-full"><p className="text-white">{servers[index]}</p></button>
+                <li className="w-md p-2" key={index} onClick={() => joinRoomFromServer(servers[index])}>
+                  <button className="hover:bg-[gray] hover:rounded hover:p p-1 hover:cursor-pointer text-white button text-center w-full">{servers[index]}</button>
                 </li>
               )
             })

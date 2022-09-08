@@ -2,11 +2,8 @@ import NavBar from '../components/NavBar';
 import Sidebar from '../components/Sidebar';
 import SidebarServer from '../components/SidebarServer';
 import React from 'react';
-import { useMainContext } from '../contexts/MainUserContext';
-import ChatHeader from '../components/ChatHeader';
 
 export default function ChatboxLayout({ children }) {
-  const userInfoContext = useMainContext();
   return (
     <div className="min-h-screen flex flex-col h-screen  overflow-x-hidden">
       <header className="bg-red-50">
@@ -20,12 +17,7 @@ export default function ChatboxLayout({ children }) {
           <SidebarServer />
         </nav>
         <main className="flex-1 overflow-x-hidden overflow-y-auto">
-          <div className="container bg-green-300 min-h-screen flex flex-col">
-            <ChatHeader />
-            <div className='bg-red-500 h-30'>
-              {children}
-            </div>
-          </div>
+          {children}
         </main>
       </div>
     </div>

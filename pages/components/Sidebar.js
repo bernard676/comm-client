@@ -31,26 +31,24 @@ export default function Sidebar({socket}) {
   return (
     <div className="text-white">
       <div>
-        <h1>MySpace</h1>
         <nav>
         <ul>
           <li>
-            <img className="rounded-full w-14 h-14 m-auto mt-3" src={user?.picture} />
+            <img className="rounded-xl" src={user?.picture} />
           </li>
         </ul>
       </nav>
       </div>
-      <div>
-        <h1>Server</h1>
+      <div className='mt-2 mb-4 rounded bg-gray-300 w-10 h-1'>
+        
       </div>
       <nav>
-        <ul>
+        <ul >
         {
             userInfoContext?.contact?.map((element, index) => {
               return (
-                <li onClick={() => setTalkingTo(element)} key={index}>
-                  <img className="rounded-full w-14 h-14 m-auto mt-3" src={element?.image} />
-                  <p>{element?.id}</p>
+                <li className="mb-3" onClick={() => setTalkingTo(element)} key={index}>
+                  <img className="rounded hover:cursor-pointer" src={element?.image} />
                 </li>
               );
             })

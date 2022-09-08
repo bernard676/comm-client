@@ -5,7 +5,7 @@ export default function ChatHeader() {
 
   return (
     <div className="sticky top-0">
-      <div className="sticky top-0 text-white flex items-center bg-[#36393f] border p-2">
+      <div className="sticky top-0 text-white flex items-center bg-[#36393f] border-b border-gray-500 p-2">
         <img className="rounded-full w-10 h-10" src={userInfoContext?.talkingTo?.image} />
         <div className="pl-2">
           <div className="font-semibold">
