@@ -3,7 +3,7 @@ import AddUserModal from './AddUserModal';
 import { Tooltip } from "@mui/material";
 import { useUser } from '@auth0/nextjs-auth0';
 import React, { useEffect, useState, useContext } from 'react';
-import { useMainContext, useMainUpdateContext} from '../contexts/MainUserContext';
+import { useMainContext, useMainUpdateContext} from '../../contexts/MainUserContext';
 
 export default function Sidebar({socket}) {
   const userInfoContext = useMainContext();

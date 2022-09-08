@@ -1,4 +1,4 @@
-import { useMainContext } from '../contexts/MainUserContext';
+import { useMainContext } from '../../contexts/MainUserContext';
 
 export default function ChatHeader() {
   const userInfoContext = useMainContext();

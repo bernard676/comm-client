@@ -1,11 +1,10 @@
 import { useUser } from '@auth0/nextjs-auth0';
-import { Button } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import { useMainContext, useMainUpdateContext } from '../contexts/MainUserContext';
+import React, { useState } from 'react';
+import { useMainContext, useMainUpdateContext } from '../../contexts/MainUserContext';
 import { useSocket } from '../_app';
-export default function Sidebar() {
 
-  let servers = ["roomA1", "roomA2", "roomA3", "roomA4", "roomA5"];
+export default function Sidebar() {
+  let servers = ["Welcome chat", "Live stream", "announcement", "vip", "general"];
   const socket = useSocket();
   const userInfoContext = useMainContext();
   const updateUserInfoContext = useMainUpdateContext();
@@ -37,7 +36,7 @@ export default function Sidebar() {
             servers.map((element, index) => {
               return (
                 <li className="w-md p-2" key={index} onClick={() => joinRoomFromServer(servers[index])}>
-                  <button className="hover:bg-[gray] hover:rounded hover:p p-1 hover:cursor-pointer text-white button text-center w-full">{servers[index]}</button>
+                  <button className="hover:bg-[gray] hover:rounded hover:p p-1 hover:cursor-pointer text-white button text-left w-full">{servers[index]}</button>
                 </li>
               )
             })

@@ -2,8 +2,8 @@ import '../styles/globals.css'
 import 'tailwindcss/tailwind.css';
 import { React } from 'react';
 import { UserProvider } from '@auth0/nextjs-auth0';
-import { ThemeProvider } from './contexts/ThemeContext';
-import { MainUserProvider } from './contexts/MainUserContext';
+import { ThemeProvider } from '../contexts/ThemeContext';
+import { MainUserProvider } from '../contexts/MainUserContext';
 import io from 'socket.io-client';
 
 var socket = io.connect("http://localhost:3001");

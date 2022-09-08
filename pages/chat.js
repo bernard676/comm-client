@@ -1,12 +1,8 @@
-import Layout from './layouts/Layout';
 import ChatboxLayout from './layouts/ChatboxLayout';
 import React, { useState, useEffect } from "react";
 import { useSocket } from './_app';
-import { useMainContext, useMainUpdateContext } from './contexts/MainUserContext';
+import { useMainContext } from '../contexts/MainUserContext';
 import { useUser } from '@auth0/nextjs-auth0';
-import NavBar from './components/NavBar';
-import Sidebar from './components/Sidebar';
-import SidebarServer from './components/SidebarServer';
 import ChatHeader from './components/ChatHeader';
 import YouChatted from './components/YouChatted';
 import YouReceived from './components/YouReceived';

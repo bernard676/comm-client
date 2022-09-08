@@ -1,17 +1,16 @@
 import React, { useEffect, useContext ,useState,createContext } from 'react';
-import io from "socket.io-client";
 
-const MainUserContext = createContext();
-const MainUserUpdateContext = createContext();
+export const MainUserContext = createContext();
+export const MainUserUpdateContext = createContext();
 
-export function useMainContext() {
+export const useMainContext = () => {
   return useContext(MainUserContext);
 }
-export function useMainUpdateContext() {
+export const useMainUpdateContext = () => {
   return useContext(MainUserUpdateContext);
 }
 
-export function MainUserProvider({children}) {
+export const MainUserProvider = ({children}) => {
   const [contact, setContact] = useState([
     {
       id: 1,
